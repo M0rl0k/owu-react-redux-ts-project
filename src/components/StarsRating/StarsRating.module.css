@@ -1,0 +1,19 @@
+.StarsRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+}
+
+.StarsRatingNumber {
+    background: rgb(107, 107, 107);
+
+    padding: 1px 4px;
+
+    border-radius: 5px;
+}
+
+.StarsRatingNumber.light {
+    background: rgb(185, 185, 185);
+}

@@ -1,0 +1,46 @@
+.GenreList {
+    width: 18%;
+    height: 500px;
+
+    padding: 5px 0 0 10px;
+    margin-top: 55px;
+
+    color: rgb(185, 185, 185);
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    position: sticky;
+    top: 80px;
+
+    border-right: 1px solid rgb(30, 30, 30);
+
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.GenreList span {
+    width: fit-content;
+}
+
+.GenreList.light {
+    color: rgb(18,18,18);
+}
+
+.GenreList::-webkit-scrollbar {
+    display: none;
+}
+
+.GenreList span:hover, .GenreList span:focus {
+    cursor: pointer;
+    color: rgb(225, 69, 23);
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1920px) {
+    .GenreList {
+        height: fit-content;
+    }
+}
+

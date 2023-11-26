@@ -1,0 +1,21 @@
+.GenreBadge {
+    width: fit-content;
+    transition: .3s all;
+    padding: 5px 30px;
+
+    border-radius: 15px;
+    border: none;
+
+    background: rgb(25, 25, 25);
+    color: rgb(185, 185, 185);
+}
+
+.GenreBadge.light {
+    background: rgb(185, 185, 185);
+    color: rgb(18, 18, 18);
+}
+
+.GenreBadge.active, .GenreBadge:hover, .GenreBadge:focus {
+    cursor: pointer;
+    background: rgb(225, 69, 23);
+}

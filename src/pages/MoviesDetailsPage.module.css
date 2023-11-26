@@ -1,0 +1,22 @@
+.MoviesDetailsPage {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(19,19,19);
+}
+
+.MoviesDetailsPage.light {
+    background: rgb(211, 211, 211);
+}
+
+.MoviesDetailsPageWrap {
+    width: 90%;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+
+    margin-top: 30px;
+}

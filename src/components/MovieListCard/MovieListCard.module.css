@@ -1,0 +1,83 @@
+.MovieListCard {
+    width: 180px;
+    height: 340px;
+
+    margin-bottom: 10px;
+
+    color: rgb(185, 185, 185);
+    letter-spacing: 2px;
+
+    border-radius: 10px;
+
+    transition: .1s all;
+
+    text-decoration: none;
+}
+
+.MovieListCard.light {
+    color: rgb(18, 18 , 18);
+}
+
+.MovieListCard:hover, .MovieListCard:focus{
+    cursor: pointer;
+
+    outline: 1px solid rgb(225, 69, 23);
+    box-shadow: rgb(140, 52, 29) 0 0 15px;
+
+    scale: 103%;
+}
+
+.MovieListCardTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MovieListCardTop img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.MovieListCardBottom {
+    padding: 5px 2px;
+    font-size: 11px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.MovieListCardBottom p {
+    max-height: 32px;
+    overflow: hidden;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1600px){
+    .MovieListCard {
+        width: 210px;
+        height: 380px;
+    }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1800px) {
+    .MovieListCard {
+        width: 230px;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1801px) and (max-width: 1921px) {
+    .MovieListCard {
+        width: 250px;
+        height: 430px;
+    }
+
+    .MovieListCard:hover, .MovieListCard:focus {
+        scale: 105%;
+    }
+}
+
+

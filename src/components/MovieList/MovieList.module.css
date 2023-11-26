@@ -1,0 +1,121 @@
+.WrapMovieList {
+    width: 80%;
+}
+
+.MovieListSearchGenre.light {
+    color: rgb(18, 18, 18);
+}
+
+.MovieList {
+    display: flex;
+    flex-flow: row  wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 1845px) {
+    .MovieList {
+        gap: 5px;
+    }
+}
+
+.Pagination {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+
+    margin: 30px 0 50px 0;
+
+    color: rgb(185, 185, 185);
+}
+
+.Pagination button {
+    background: none;
+
+    color: rgb(185, 185, 185);
+
+    padding: 2px 6px;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+.Pagination.light {
+    color: rgb(18,18,18);
+}
+
+.Pagination.light button {
+    color: rgb(18,18,18);
+}
+
+.Pagination button:disabled {
+    cursor: auto;
+    color: rgb(19, 19, 19);
+}
+
+.Pagination.light button:disabled {
+    color: rgb(211, 211, 211);
+}
+
+.MovieListSearch {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.MovieListSearchGenre {
+    font-size: 30px;
+    color: rgb(185, 185, 185);
+}
+
+.MovieListSearch input {
+    height: 30px;
+    width: 180px;
+    padding: 0 10px;
+
+    background: none;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 10px;
+
+    color: rgb(185, 185, 185);
+
+    outline: none;
+
+    transition: 0.5s all;
+}
+
+.MovieListSearch input.light {
+    color: rgb(18,18,18);
+}
+
+
+.MovieListSearch input:focus {
+    border: 1px solid rgb(225, 69, 23);
+    scale: 102%;
+}
+
+.MovieListSearch button {
+    background: none;
+    border: none;
+
+    font-size: 18px;
+
+    color: rgb(185, 185, 185);
+
+    position: absolute;
+    right: 1%;
+
+    transition: .3s all;
+}
+
+.MovieListSearch button:enabled {
+    color: rgb(225, 69, 23);
+}

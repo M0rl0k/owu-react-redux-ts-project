@@ -1,0 +1,5 @@
+const apiToken = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4M2ZhYTlhNGU2ZTgyY2YxNGYzMzkwMjEyMmIzMDQxNiIsInN1YiI6IjYyZTJjNzJjNWUxMjAwMDA1NTY2MTNiZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.w0W2td__Ilm6COE0OFnNlGVYOILPY3WiSApaJ8K5CiM';
+
+export {
+    apiToken
+}

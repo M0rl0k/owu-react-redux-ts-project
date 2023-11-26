@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+    transition: .2s all;
+}
+
+body {
+    background: rgb(19, 19, 19);
+}
+
+body.light {
+    background: rgb(211, 211, 211);
+}
+
+
+
+

@@ -1,0 +1,64 @@
+.Header {
+    width: 100%;
+    height: 10vh;
+
+    background: rgb(19, 19, 19);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(185, 185, 185);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+.Header.light {
+    background: rgb(211, 211, 211);
+    color: rgb(18, 18, 18);
+}
+
+.HeaderContainer {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.HeaderContainerLeft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HeaderContainerLeft span {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: rgb(225, 69, 23);
+
+    cursor: pointer;
+
+    transition: .3s all;
+    font-family: 'Lexend Zetta', sans-serif;
+}
+
+.HeaderContainerLeft span:hover {
+    color: rgb(255, 77, 0);
+}
+
+.HeaderContainerLeftTheme {
+    background: #fff;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.HeaderContainerRight {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}

@@ -1,0 +1,145 @@
+.MovieInfo {
+    color: rgb(185, 185, 185);
+    width: 60%;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    border-right: 1px solid rgb(30,30,30);
+
+    margin-bottom: 30px;
+
+    letter-spacing: 1px;
+
+}
+
+.MovieInfo.light {
+    color: rgb(18,18,18);
+
+    border-right: 1px solid rgb(185,185,185);
+}
+
+.MovieInfoHeading {
+    margin-left: 5%;
+}
+
+.MovieInfoTop{
+    margin-left: 5%;
+
+    position: relative;
+}
+.MovieInfoMiddle{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.MovieInfo h2 {
+    font-size: 80px;
+    line-height: 70px;
+}
+
+.MovieInfoRelease {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+
+    margin: 15px 20%;
+}
+
+.MovieInfoRelease span {
+    color: rgb(225, 69, 23);
+}
+
+.MovieInfoReleaseGenres {
+    display: flex;
+    align-items: center;
+}
+
+.MovieInfoReleaseGenre {
+    margin: 0 5px;
+}
+
+.MovieInfoBlock {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.MovieInfoBlockHeading {
+    font-size: 30px;
+    line-height: 30px;
+    width: 10%;
+    margin-right: 6%;
+    font-weight: 500;
+}
+
+.MovieInfoBlockText {
+    width: 70%;
+}
+
+.MovieInfoBlockCast {
+    width: 70%;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.MovieInfoBlockCast p {
+    margin: 0 2px;
+}
+
+.MovieInfoBlockCast p:after {
+    content: ',';
+}
+
+.MovieInfoBottom{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    gap: 20px;
+}
+
+.MovieInfoBottomBlock {
+    border: 1px solid rgb(225, 69, 23);
+
+    padding: 5px 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MovieInfoRating {
+    margin-right: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    position: absolute;
+    right: 0;
+    top: -30%;
+}
+
+@keyframes myAnim {
+    0% {transform: translateX(10px)}
+    50% {transform: translateX(0px)}
+    100% {transform: translateX(10px)}
+}
+
+.Arrow {
+    position: absolute;
+    top: 10px;
+
+    font-size: 30px;
+
+    animation: myAnim 1.5s ease-in-out infinite;
+    color: rgb(225, 69, 23);
+
+    cursor: pointer;
+}
+
+
+
