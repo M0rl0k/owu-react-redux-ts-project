@@ -49,13 +49,6 @@
     color: rgb(255, 77, 0);
 }
 
-.HeaderContainerLeftTheme {
-    background: #fff;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-}
-
 .HeaderContainerRight {
     display: flex;
     align-items: center;
