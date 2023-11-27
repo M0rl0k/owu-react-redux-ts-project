@@ -59,6 +59,7 @@ const MovieList= () => {
     const startSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setQuery((prev => {
             prev.set('page' , '1')
+            prev.delete('with_genre')
             return prev
         }))
         setInputValue(e.target.value)
