@@ -16,6 +16,10 @@ const MoviesDetailsPage = () => {
     useEffect(()=> {
         dispatch(movieDetailsActions.getMovieDetailsById(+id))
         dispatch(movieDetailsActions.getMovieCastList(+id))
+
+        return () => {
+            dispatch(movieDetailsActions.clearMovieDetails())
+        }
     }, [id])
 
     return (

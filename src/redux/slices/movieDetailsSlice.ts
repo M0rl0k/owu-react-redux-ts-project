@@ -44,7 +44,12 @@ const initialState:IState = {
 const movieDetailsSlice = createSlice({
     name: 'movieDetailsSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        clearMovieDetails: (state => {
+            state.movieDetails = null
+            state.movieCast = null
+        })
+    },
     extraReducers: builder =>
         builder
             .addCase(getMovieDetailsById.fulfilled, (state, action) => {

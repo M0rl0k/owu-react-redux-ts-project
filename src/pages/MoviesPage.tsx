@@ -2,8 +2,8 @@ import React from 'react';
 
 
 import {GenreList, MovieList} from "../components";
-import css from './MoviesPage.module.css'
 import {useAppSelector} from "../hooks";
+import css from './MoviesPage.module.css'
 
 
 const MoviesPage = () => {
