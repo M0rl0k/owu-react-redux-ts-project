@@ -46,6 +46,14 @@
     font-size: 20px;
 }
 
+.Pagination button:active {
+    scale: 120%;
+}
+
+.Pagination button:hover {
+    color: rgb(225, 69, 23);
+}
+
 .Pagination.light {
     color: rgb(18,18,18);
 }
