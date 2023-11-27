@@ -20,7 +20,7 @@ const MoviesDetailsPage = () => {
         return () => {
             dispatch(movieDetailsActions.clearMovieDetails())
         }
-    }, [id])
+    }, [id, dispatch])
 
     return (
         <section className={`${css.MoviesDetailsPage} ${isLight ? css.light : ''}`}>

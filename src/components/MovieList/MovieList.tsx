@@ -40,7 +40,7 @@ const MovieList= () => {
             dispatch(moviesActions.getMovies(+query.get('page')))
             return;
         }
-    }, [query, value])
+    }, [query, value, dispatch])
 
     const prevPage = () => {
         setQuery(prev => {

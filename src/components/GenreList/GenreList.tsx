@@ -15,7 +15,7 @@ const GenreList = () => {
 
     useEffect(()=> {
         dispatch(genresActions.getGenres())
-    }, [])
+    }, [dispatch])
 
     const navigate = useNavigate();
 
