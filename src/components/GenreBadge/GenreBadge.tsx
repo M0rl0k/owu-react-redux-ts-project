@@ -4,7 +4,8 @@ import React, {FC} from 'react';
 import css from './GenreBadge.module.css'
 import {IGenres} from "../../interfaces";
 import {useSearchParams} from "react-router-dom";
-import {useAppSelector} from "../../hooks";
+import {useAppDispatch, useAppSelector} from "../../hooks";
+import {moviesActions} from "../../redux/slices";
 
 interface IProps {
     genre: IGenres
@@ -15,12 +16,14 @@ const GenreBadge: FC<IProps> = ({genre}) => {
     const {name, id} = genre
 
     const [query, setQuery] = useSearchParams({with_genre: ''})
+    const dispatch = useAppDispatch()
 
     const handleKey = (e:React.KeyboardEvent<HTMLButtonElement>):void => {
       if (e.key !== 'Enter') return
         setQuery(prev => {
             prev.set('page', '1')
             prev.set('with_genre', `${id}`)
+            dispatch(moviesActions.setKeyword(''))
             return prev
         })
     }
@@ -28,6 +31,8 @@ const GenreBadge: FC<IProps> = ({genre}) => {
         setQuery(prev => {
             prev.set('page', '1')
             prev.set('with_genre', `${id}`)
+            prev.delete('search')
+            dispatch(moviesActions.setKeyword(''))
             return prev
         })
     }

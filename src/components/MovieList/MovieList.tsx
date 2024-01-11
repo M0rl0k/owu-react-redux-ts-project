@@ -1,29 +1,28 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useSearchParams} from "react-router-dom";
 
 
-import css from './MovieList.module.css'
 import {MovieListCard} from "../MovieListCard";
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {moviesActions} from "../../redux/slices";
+import css from './MovieList.module.css'
 
 
 const MovieList= () => {
 
     const {isLight} = useAppSelector(state => state.theme)
-    const {movies, total_pages} = useAppSelector(state => state.movie)
+    const {movies, total_pages, keyword} = useAppSelector(state => state.movie)
     const [query, setQuery] = useSearchParams({page: '1'})
-    const [value, setInputValue] = useState<string>('')
     const isNext = +query.get('page') === total_pages
     const isPrev = +query.get('page') > 1;
 
     const dispatch = useAppDispatch()
 
     useEffect(()=> {
-        if (value) {
+        if (keyword) {
             dispatch(moviesActions.searchByKeyWord({
                 page: +query.get('page'),
-                query: value
+                query: keyword
             }))
             return
         }
@@ -36,11 +35,11 @@ const MovieList= () => {
             return
         }
 
-        if (!query.get('with_genre') && !value) {
+        if (!query.get('with_genre') && !keyword) {
             dispatch(moviesActions.getMovies(+query.get('page')))
             return;
         }
-    }, [query, value, dispatch])
+    }, [query, keyword, dispatch])
 
     const prevPage = () => {
         setQuery(prev => {
@@ -59,10 +58,11 @@ const MovieList= () => {
     const startSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setQuery((prev => {
             prev.set('page' , '1')
+            prev.set('search', e.target.value)
             prev.delete('with_genre')
             return prev
         }))
-        setInputValue(e.target.value)
+        dispatch(moviesActions.setKeyword(e.target.value))
     }
 
     return (
@@ -70,12 +70,12 @@ const MovieList= () => {
             <div className={css.MovieListSearch}>
                 <input type="text"
                        placeholder={'Type to search...'}
-                       value={value}
+                       value={keyword}
                        onChange={(e) => startSearch(e)}
                        className={isLight ? css.light : ''}
                 />
                 <button
-                    disabled={!value}>
+                    disabled={!keyword}>
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>

@@ -6,7 +6,8 @@ import {moviesService} from "../../services";
 
 interface IState {
     movies: IMovieInterface[],
-    total_pages: number
+    total_pages: number,
+    keyword: string
 }
 
 const getMovies = createAsyncThunk<IMoviesRes<IMovieInterface[]>, number>(
@@ -50,13 +51,18 @@ const searchByKeyWord = createAsyncThunk<IMoviesRes<IMovieInterface[]>, {page:nu
 
 const initialState:IState = {
     movies: [],
-    total_pages: null
+    total_pages: null,
+    keyword: null
 }
 
 const moviesSlice = createSlice({
     name: 'moviesSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        setKeyword: (state, action) => {
+            state.keyword = action.payload
+        }
+    },
     extraReducers: builder =>
         builder
             .addMatcher(isFulfilled(getMoviesByGenre, getMovies, searchByKeyWord), (state, action) => {

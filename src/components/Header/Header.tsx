@@ -3,14 +3,17 @@ import {useNavigate} from "react-router-dom";
 
 import {UserInfo} from "../UserInfo";
 import {ThemeSwitcher} from "../ThemeSwitcher";
-import {useAppSelector} from "../../hooks";
+import {useAppDispatch, useAppSelector} from "../../hooks";
 import css from './Header.module.css'
+import {moviesActions} from "../../redux/slices";
 
 const Header = () => {
 
     const navigate = useNavigate()
+    const dispatch = useAppDispatch()
 
     const goHome = () => {
+        dispatch(moviesActions.setKeyword(''))
         navigate('/')
     }
 
